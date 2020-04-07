@@ -1,0 +1,117 @@
+.dashboard-card{
+    width: 100%;   
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    padding: 26px;
+}
+
+.searchInput{
+    border:none;
+    background-color: transparent;
+}
+
+.searchInput:focus
+{
+    outline: none;
+}
+.input-group-search{
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    padding: 0;
+    background-color: white;
+    width: fit-content;
+}
+
+  a.search-icon i{
+    font-size: 22px;
+    color: #9e9e9e;
+  }
+  a.search-icon:hover{
+    text-decoration: none;
+    color: $green-blue;
+  }
+
+  a.search-icon:hover i{
+    text-decoration: none;
+    color: $green-blue;
+  }
+  
+  .space1{
+    width: 4%!important;
+}
+
+.space2{
+    width: 2%!important;
+}
+
+.input-group-text{
+    background-color: transparent!important;
+    padding: 0.25rem 0.5rem;
+}
+
+.input-group-text i{
+    font-size: 12px;
+}
+
+.input-group input, .input-group select{
+    border-left: 0px!important;
+    padding-left: 0!important;
+    font-size: 12px;
+}
+.table.new_invoice td{
+    border: solid 0.3px rgba(74, 74, 74, 0.4)!important;
+    padding: 4px 4px;
+    vertical-align: middle;
+}
+
+.table.new_invoice td input, .table.new_invoice td select{
+    font-size: 12px;
+    padding: 4px 4px;
+    height: 30px;
+    line-height: 22px;
+}
+
+.invoice_col1{
+    width: 13%;
+}
+.invoice_col2{
+    width:27%;
+}
+.invoice_col3{
+    width: 11%;
+}
+.invoice_col4{
+    width: 15%;
+}
+.invoice_col5{
+    width: 13%;
+}
+.invoice_col6{
+    width: 16%;
+}
+.invoice_col7{
+    width: 5%;
+}
+
+a.delete-row{
+    margin: auto;
+    display: block;
+    width: fit-content;
+}
+a.delete-row i{
+    font-size: 14px;
+    color: $black-70;
+}
+
+.table.new_invoice tr.buttonline td{
+    border-width: 0px!important;
+    padding-top: 20px!important;
+    padding-left: 0;
+} 
+
+.totals {
+    position: relative;
+    left: 1px;
+    bottom: 48px;
+    width: 34%;
+}

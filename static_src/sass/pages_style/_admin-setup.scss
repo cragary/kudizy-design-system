@@ -1,0 +1,178 @@
+html, body, .wrapper{
+    background-color: #fafafa;
+}
+html, body, .wrapper {
+    height: 100%;
+    width: 100%;
+}
+
+.sidenav{
+    min-width: 0;
+    position: fixed;
+    background-color: $navy-blue;
+    height: 100%;
+    width: 210px;
+    left: 0;
+    z-index: 15;
+
+
+    .sidenav-brand-wrapper{
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        height: $navbar-height;
+        padding: 16px 32px;
+        margin-bottom: 16px;
+        .sidenav-brand{
+            display: inline-block;
+            padding-top: 0.3125rem;
+            padding-bottom: 0.3125rem;
+            margin-right: 24px;
+            font-size: 1.125rem;
+            line-height: inherit;
+            white-space: nowrap;
+            width: 100%;
+            height: 100%;
+
+            img{
+                width: 100%;
+                height: 200%;
+            }
+        }
+    }
+}
+
+nav.navbar{
+    min-width: 0;
+    z-index: 776;
+    left: 210px;
+}
+
+.page-body-wrapper{
+    width: calc(100% - 210px);
+    //margin-left: 25%;
+}
+
+.sidenav.hidden{
+    margin-left: -210%;
+}
+.expandNav{
+    margin-left: -210px;
+    width: 100%
+}
+
+.expand{
+    padding-left: 32px!important;
+}
+
+.main-panel{
+    padding: 80px 62px 80px 32px;
+}
+
+.username{
+    font-size: $font-size-sm;
+}
+
+img.profile-picture{
+    margin-right: 4px;
+}
+
+.left-panel{
+    width: 210px;
+}
+
+ul.errorlist li{
+    list-style-type: none !important ;
+    color: $chestnut-red;
+}
+ul.errorlist{
+    padding-left: 0;
+}
+
+#sidebarCollapse + div .row .dropdown{
+    cursor: pointer;
+}
+
+label.pic-image  {
+    cursor: pointer;
+}
+
+
+.ui-menu.ui-widget.ui-widget-content.ui-autocomplete.ui-front li {
+    display: block;
+    width: 100%; // For `<button>`s
+    padding: $dropdown-item-padding-y $dropdown-item-padding-x;
+    clear: both;
+    font-weight: $font-weight-normal;
+    color: $dropdown-link-color;
+    text-align: inherit; // For `<button>`s
+    white-space: nowrap; // prevent links from randomly breaking onto new lines
+    background-color: transparent; // For `<button>`s
+    border: 0; // For `<button>`s
+
+    // Prevent dropdown overflow if there's no padding
+    // See https://github.com/twbs/bootstrap/pull/27703
+    @if $dropdown-padding-y == 0 {
+      &:first-child {
+        @include border-top-radius($dropdown-inner-border-radius);
+      }
+
+      &:last-child {
+        @include border-bottom-radius($drop-inner-border-radius);
+      }
+    }
+
+    @include hover-focus {
+      color: $dropdown-link-hover-color;
+      text-decoration: none;
+      @include gradient-bg($dropdown-link-hover-bg);
+    }
+
+    &.active,
+    &:active {
+      color: $dropdown-link-active-color;
+      text-decoration: none;
+      @include gradient-bg($dropdown-link-active-bg);
+    }
+
+    &.disabled,
+    &:disabled {
+      color: $dropdown-link-disabled-color;
+      pointer-events: none;
+      background-color: transparent;
+      // Remove CSS gradients if they're enabled
+      @if $enable-gradients {
+        background-image: none;
+      }
+    }
+  }
+
+  .ui-menu.ui-widget.ui-widget-content.ui-autocomplete.ui-front {
+    min-width: $dropdown-min-width;
+    padding: $dropdown-padding-y 0;
+    margin: $dropdown-spacer 0 0; // override default ul
+    @include font-size($dropdown-font-size);
+    color: $dropdown-color;
+    text-align: left; // Ensures proper alignment if parent has it changed (e.g., modal footer)
+    list-style: none;
+    background-color: $dropdown-bg;
+    background-clip: padding-box;
+    border: $dropdown-border-width solid $dropdown-border-color;
+    @include border-radius($dropdown-border-radius);
+    @include box-shadow($dropdown-box-shadow);
+  }
+
+  .ui-menu.ui-widget.ui-widget-content.ui-autocomplete.ui-front li a{
+      text-decoration: none;
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    .left-panel .sidenav .sidenav-brand-wrapper button{
+        display: none;
+    }
+
+    .icon-input-group .error{
+      width: 100%;
+    }

@@ -1,0 +1,114 @@
+.admin .header .title{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.item-selected-interaction i{
+    font-size: 16px;
+}
+.item-selected-interaction .nbr-selected{
+    font-size: $font-size-sm;
+    color: #029e71;
+}
+
+.action-button.dropdown-toggle::after{
+    display: none !important;
+}
+
+.invoice-top-form > div{
+    //width: 38%;
+}
+
+a.add-line{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $gray-70;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+a.add-line i{
+    font-size: 16px;
+    margin-right: 4px;
+}
+a.add-line:hover{
+    text-decoration: none;
+}
+
+.invoice-create-bottom{
+    margin-right: 0;
+    margin-left: auto;
+    //min-width: 281px;;
+}
+
+
+.modal-custom-centered{
+    margin-left: 210px;
+    width: calc(100% - 210px);
+}
+
+.invoice-creation-table input.form-control:focus{
+    box-shadow: none !important;
+}
+
+.invoice-creation-table tbody tr.buttonline td {
+    border-bottom-width: 0;
+}
+
+.invoice-creation-table tbody tr td i {
+    font-size: 24px;
+}
+
+span.select2.select2-container.select2-container--default {
+    width: 100% !important;
+}
+
+.search-input{
+    max-width: 149px;
+}
+div.dataTables_length{
+    height: 0;
+}
+
+div.dataTables_paginate.paging_full{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 24px !important;
+
+    a{
+        display: block;
+        &:hover{
+            text-decoration: none;
+        }
+
+        &.disabled span{
+            opacity: 0.25;
+        }
+    }
+    a.paginate_button.first, a.paginate_button.last{
+        span i{
+            font-size: 1rem;
+        }
+    }
+    a.paginate_button.previous, a.paginate_button.next{
+        span i{
+            font-size: 1.5rem;
+        }
+    }
+
+    div.dataTables_info{
+        padding-top: 0;
+    }
+
+}
+
+ .empty-state-img{
+    max-width: 360px;
+    height: 273px;
+}
+
+.empty-state-img + p{
+    max-width: 360px;
+}

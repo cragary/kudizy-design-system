@@ -1,0 +1,14 @@
+.input-upload{
+    height: 0;
+    overflow: hidden;
+    width: 0;
+}
+
+.input-upload + label{
+    width: 154px;
+    height: 45px;
+    border-radius: 4px;
+    border: dashed 1px $gray-40;
+    background-color: transparent;
+    cursor: pointer;
+}

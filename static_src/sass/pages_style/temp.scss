@@ -1,0 +1,44 @@
+.reveal-input {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 0;
+    width: 14px;
+
+    &:focus {
+        font-size: 12px;
+        font-weight: semi-bold;
+        width: 138px;
+        padding: 4px 8px;
+    }
+
+    &:focus > button.reveal-trigger{
+        opacity: 0 !important;
+    }
+}
+
+.reveal-input.revealed {}
+
+.reveal-label {
+    width: 88px;
+}
+
+.reveal-container:hover .reveal-trigger {
+    opacity: 1;
+}
+
+.reveal-trigger {
+    opacity: 0;
+}
+
+.hiddea {
+    opacity: 0;
+}
+
+.clientSelect span.select2-selection.select2-selection--single{
+     display: none!important;
+}
+
+.fullwidth-table{
+    margin-left: -24px;
+    margin-right: -24px;
+}

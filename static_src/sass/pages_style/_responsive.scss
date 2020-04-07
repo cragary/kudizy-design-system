@@ -1,0 +1,55 @@
+@media only screen and (max-width: 768px) {
+    .text-mobile-center{
+        text-align: center;
+    }
+
+    .wrapper.signup, .wrapper.signin{
+        height: auto!important;
+    }
+    .mb-mobile-3{
+        margin-bottom: 16px!important;
+    }
+
+    .mt-mobile-4{
+        margin-top: 24px!important;
+    }
+
+    nav.nav{
+        justify-content: center!important;
+    }
+
+    .table-listing{
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+    }
+    .main-panel {
+        padding: 80px 16px 80px 16px;
+    }
+    .w-sm-100{
+        width: 100%!important;
+    }
+
+    .d-mobi-none{
+        display: none;
+    }
+
+    .admin-wrapper nav.navbar{
+        left: 0;
+    }
+    .page-body-wrapper{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .sidenav{
+        width: 100%;
+    }
+    
+    .modal-custom-centered {
+        margin-left: 0;
+        width: 100%;
+    }
+    .left-panel .sidenav .sidenav-brand-wrapper button{
+        display: block;
+    }
+  }

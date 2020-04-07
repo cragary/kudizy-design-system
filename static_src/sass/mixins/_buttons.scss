@@ -1,0 +1,168 @@
+// Button sizes
+@mixin button-size($padding-y, $padding-x, $font-size, $line-height, $border-radius) {
+  padding: $padding-y $padding-x;
+  @include font-size($font-size);
+  line-height: $line-height;
+  // Manually declare to provide an override to the browser default
+  @include border-radius($border-radius, 0);
+}
+
+@mixin button-filled-variant($color, $value, $bg-hover-color: darken($value, 5%),$active-background: darken($value, 10%), $active-border: darken($value, 12.5%)) {
+  color: color-yiq($value);
+  @include gradient-bg($value); 
+  border-color: $value;
+  @include box-shadow($btn-box-shadow)
+  @include hover {
+    color: color-yiq($bg-hover-color);
+    @include gradient-bg($bg-hover-color);
+    border-color: $bg-hover-color;
+  }
+
+  &:focus,
+  &.focus { 
+    // Avoid using mixin so we can pass custom focus shadow properly
+    @if $enable-shadows {
+      box-shadow: $btn-box-shadow, 0 0 0 $btn-focus-width rgba(mix(color-yiq($value), $border, 15%), .5);
+    } @else {
+      box-shadow: 0 0 0 $btn-focus-width rgba($value, .4);
+    }
+  }
+
+  // Disabled comes first so active can properly restyle
+  &.disabled,
+  &:disabled {
+    color: color-yiq($value);
+    background-color: get-mudai-colors-15(#{$color});
+    border-color: get-mudai-colors-15(#{$color});;
+    // Remove CSS gradients if they're enabled
+    @if $enable-gradients {
+      background-image: none;
+    }
+  }
+
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active,
+  .show > &.dropdown-toggle {
+    color: color-yiq($active-background);
+    background-color: $active-background;
+    @if $enable-gradients {
+      background-image: none; // Remove the gradient for the pressed/active state
+    }
+    border-color: $active-border;
+
+    &:focus {
+      // Avoid using mixin so we can pass custom focus shadow properly
+      @if $enable-shadows and $btn-active-box-shadow != none {
+        box-shadow: $btn-active-box-shadow, 0 0 0 $btn-focus-width rgba(mix(color-yiq($value), $border, 15%), .5);
+      } @else {
+        box-shadow: 0 0 0 $btn-focus-width rgba(mix(color-yiq($value), $value, 15%), .5);
+      }
+    }
+  }
+}
+
+@mixin button-outlined-variant($color, $value, $color-hover: color-yiq($value), $active-background: $value, $active-border: $value) {
+  color: $value;
+  border-color: $value;
+
+  @include hover {
+    color: $color-hover;
+    background-color: $value;
+    border-color: $value;
+  }
+
+  &:focus,
+  &.focus {
+    box-shadow: 0 0 0 $btn-focus-width rgba($value, .4);
+  }
+
+  &.disabled,
+  &:disabled {
+    color: get-mudai-colors-15(#{$color});
+    border-color: get-mudai-colors-15(#{$color});
+  }
+
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active,
+  .show > &.dropdown-toggle {
+    color: color-yiq($active-background);
+    background-color: $active-background;
+    border-color: $active-border;
+
+    &:focus {
+      // Avoid using mixin so we can pass custom focus shadow properly
+      @if $enable-shadows and $btn-active-box-shadow != none {
+        box-shadow: $btn-active-box-shadow, 0 0 0 $btn-focus-width rgba($value, .5);
+      } @else {
+        box-shadow: 0 0 0 $btn-focus-width rgba($value, .5);
+      }
+    }
+  }
+}
+
+@mixin button-transparent-variant($color, $value, $hover-bg: rgba($value, 0.1),  $focus-bg: rgba($value, 0.2)) {
+  color: $black;
+  border-color: none;
+
+  @include hover {
+    background-color: $hover-bg;
+    color: $value;
+  }
+
+  &:focus,
+  &.focus {
+    box-shadow: none;
+    color: $value;
+    background-color: $focus-bg;    
+  }
+
+  &.disabled,
+  &:disabled {
+    color: get-mudai-colors-15(#{$color});;
+    background-color: transparent;
+  }
+
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active,
+  .show > &.dropdown-toggle {
+    //color: $theme-color;
+
+    &:focus {
+      // Avoid using mixin so we can pass custom focus shadow properly
+      
+    }
+  }
+}
+
+@mixin button-icon-variant($color, $value, $hover-bg: rgba($value, 0.1),  $focus-bg: rgba($value, 0.2)) {
+  color: $value;
+ 
+  @include hover {
+    background-color: $hover-bg;
+    color: $value;
+  }
+
+  &:focus,
+  &.focus {
+    box-shadow: none;
+    color: $value;
+    background-color: $focus-bg;    
+  }
+
+  &.disabled,
+  &:disabled {
+    color: get-mudai-colors-15(#{$color});;
+    background-color: transparent;
+  }
+
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active,
+  .show > &.dropdown-toggle {
+    //color: $theme-color;
+
+    &:focus {
+      // Avoid using mixin so we can pass custom focus shadow properly
+      
+    }
+  }
+}

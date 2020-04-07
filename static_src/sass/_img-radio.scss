@@ -1,0 +1,46 @@
+.img-radio-group{
+    display: inline-flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.img-radio{
+  height: 130px;
+  width: 130px;
+  border-radius: 8px;
+  border: solid 1px #dddddd;
+  background-color: #ffffff;
+  padding: 1rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.img-radio-text{
+    text-align: center;
+    font-size: $font-size-sm;
+    margin-bottom: 0;
+    width: 100%;
+    align-self: flex-end;
+    font-weight: $font-weight-normal;
+}
+
+.img-radio-container{
+    height: 74px;
+}
+  
+.img-radio:focus, .img-radio.focus{
+   background-color:  $green-haze-5;
+}
+  
+.img-radio:hover{
+    background-color:  $green-haze-5;
+}
+
+.img-radio.disabled{
+    opacity: 0.15
+}
+
+.img-radio.active {
+    border: solid 1px $green-haze-70;
+    background-color:  $green-haze-5;
+}

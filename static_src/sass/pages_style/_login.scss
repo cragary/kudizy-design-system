@@ -1,0 +1,70 @@
+.wrapper.signup , .wrapper.signin{
+    background-image: url("../img/overlay_backgroung.jpg");
+    background-size: cover;
+}
+
+.logo-white{
+    margin-bottom: 14px;
+}
+
+.logo-grey{
+    margin-bottom: 26px;
+}
+
+.signin, .signup {
+    &> .container{
+        padding-top: 32px !important;
+        padding-bottom: 32px !important;
+    }
+}
+
+.login .card{
+    max-width: 400px;
+    width: 400px;
+}
+
+.login .card .title{
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 8px !important;
+}
+
+.login .card .subtitle{
+    font-weight: $font-weight-normal;
+    font-size: $font-size-sm;
+    margin-bottom: 24px !important;
+    line-height: 1.67;
+}
+
+.actions-row{
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+
+
+//select2
+.select2-container .select2-selection--single, span#select2-id_currency-container{
+    height: 36px !important;
+}
+span#select2-id_currency-container {
+    display: flex;
+    align-items: center;
+    padding-left: 0;
+}
+
+span#select2-id_currency-container  i{
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    margin-bottom: 0;
+    font-size: 1rem;
+    color: #5E5E5E;
+    text-align: center;
+    white-space: nowrap;
+    background-color: transparent;
+}
+
+
+
+    

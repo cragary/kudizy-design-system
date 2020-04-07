@@ -1,0 +1,5 @@
+@mixin modal-variant($theme-color) {
+    .modal-title{
+        color: $theme-color;
+    }
+  }

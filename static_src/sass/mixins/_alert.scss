@@ -1,0 +1,4 @@
+@mixin alert-variant($color, $background: get-mudai-colors-70(#{$color}), $border:get-mudai-colors(#{$color})) {
+  @include gradient-bg($background); 
+  border-color: $border;
+}

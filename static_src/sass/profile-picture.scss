@@ -1,0 +1,22 @@
+  *.profile-picture{
+    width: $profile-picture-size;
+    height: $profile-picture-size;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+
+  *.profile-picture-lg {
+    width: $profile-picture-size-lg;
+    height: $profile-picture-size-lg;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+ 
+
+  *.profile-picture-sm {
+    width: $profile-picture-size-sm;
+    height: $profile-picture-size-sm;
+    object-fit: cover;
+    border-radius: 50%;
+  }
